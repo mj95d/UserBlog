@@ -21,7 +21,7 @@ public class UserController {
         return ResponseEntity.status(200).body(this.userService.getAll(user.getId()));
     }
 
-    @PostMapping("/register")
+    @PostMapping("/add")
     public ResponseEntity add(@Valid @RequestBody User user){
         this.userService.add(user);
         return ResponseEntity.status(200).body("user added");
